@@ -1,0 +1,26 @@
+sebatapiaoviedo=# CREATE DATABASE caso1;
+CREATE DATABASE
+sebatapiaoviedo=# \c caso1;
+You are now connected to database "caso1" as user "sebatapiaoviedo".
+caso1=# CREATE TABLE departamento (
+caso1(# nombre_departamento VARCHAR,
+caso1(# id SERIAL PRIMARY KEY
+caso1(# );
+CREATE TABLE
+caso1=# CREATE TABLE trabajador (
+caso1(# rut VARCHAR PRIMARY KEY,
+caso1(# nombre VARCHAR,
+caso1(# dirección VARCHAR,
+caso1(# id_departamento INT REFERENCES departamento (id)
+caso1(# );
+CREATE TABLE
+caso1=# CREATE TABLE liquidaciones (
+caso1(# rut VARCHAR REFERENCES trabajador (rut)
+caso1(# ,
+caso1(# id SERIAL PRIMARY KEY,
+caso1(# drive VARCHAR
+caso1(# );
+CREATE TABLE
+caso1=# ^C
+caso1=# 
+

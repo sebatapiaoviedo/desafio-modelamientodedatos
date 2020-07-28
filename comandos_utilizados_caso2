@@ -1,0 +1,45 @@
+You are now connected to database "sebatapiaoviedo" as user "sebatapiaoviedo".
+sebatapiaoviedo=# CREATE DATABASE caso2;
+CREATE DATABASE
+sebatapiaoviedo=# \c caso2;
+You are now connected to database "caso2" as user "sebatapiaoviedo".
+caso2=# CREATE TABLE curso (
+caso2(# nombre VARCHAR,
+caso2(# id SERIAL,
+caso2(# PRIMARY KEY (id)
+caso2(# );
+CREATE TABLE
+caso2=# CREATE TABLE alumno (
+caso2(# nombre VARCHAR,
+caso2(# rut VARCHAR,
+caso2(# curso_id INT,
+caso2(# id SERIAL,
+caso2(# FOREIGN KEY (curso_id) REFERENCES curso (id),
+caso2(# PRIMARY KEY (id)
+caso2(# );
+CREATE TABLE
+caso2=# CREATE TABLE departamento (
+caso2(# nombre VARCHAR,
+caso2(# id SERIAL PRIMARY KEY
+caso2(# );
+CREATE TABLE
+caso2=# CREATE TABLE profesor (
+caso2(# nombre VARCHAR,
+caso2(# departamento_id INT,
+caso2(# id SERIAL,
+caso2(# FOREIGN KEY (departamento_id) REFERENCES departamento (id),
+caso2(# PRIMARY KEY (id)
+caso2(# );
+CREATE TABLE
+caso2=# CREATE TABLE prueba (
+caso2(# puntaje FLOAT,
+caso2(# profesor_id INT,
+caso2(# alumno_id INT,
+caso2(# id SERIAL,
+caso2(# FOREIGN KEY (profesor_id) REFERENCES profesor (id),
+caso2(# FOREIGN KEY (alumno_id) REFERENCES alumno (id),
+caso2(# PRIMARY KEY (id)
+caso2(# );
+CREATE TABLE
+caso2=# 
+
